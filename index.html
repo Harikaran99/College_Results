@@ -1,60 +1,109 @@
 <!DOCTYPE html>
-<!-- warning ⚠️ Don't cheat your Mind Use this code before you think this way is right??. -->
-<html>
-    <head>
+<html lang="en">
+
+<head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>AAGAC</title>
+    <style>
+        body {
+            font-family: Verdana;
+            color: #141414;
+            background-color: #f0f0f0;
+            margin: auto auto auto auto;
+            width: 80%;
+        }
+
+        div {
+            padding: 15px;
+            text-align: center;
+            align-items: center;
+            border: 1px solid #f0f0f0;
+            width: 100%;
+            margin: auto auto auto auto;
+            min-height: 200px;
+        }
+
+        .content {
+            background-color: #55f5f5;
+        }
+    </style>
 </head>
-    <body style="font-family:Verdana;color:#141414; background-color:#f0f0f0; margin: auto auto auto auto; width: 80%;">
-    
-    <div style="padding:15px;text-align:center;" align="center">
-    
-        <img src="questionpaper_files/logo.png"> 
-    
-        <h3>UG/PG - April/May 2022 Examinations  </h3>
-        <h4>Second Year 4th Semaster Exam Result</h4>
-         
+
+<body>
+    <div>
+        <img src="questionpaper_files/logo.png">
+        <h3>UG/PG - April/May 2023 Examinations</h3>
+        <h4>Enter your Registration Number And Date Of Birth</h4>
     </div>
-        
-        <div style="align-items: center; border: 1px solid #f0f0f0; width : 100%; margin: auto auto auto auto; min-heigh: 300px; background-color:#55f5f5; " align="center">
-        <form name="frm" method="POST">
+
+    <div align="center" class="content">
+        <form name="frm" onsubmit="submitForm(event)">
             <br>
-            <b>Registration Number : </b> <input type="text" name="regNum" id="regNum" maxlength="20" value="" required="">             
-        </form>
-        <form name="frm" method="POST">
-            <br>
-            <b>Date Of Birth : </b> <input type="text" name="regNum" id="regNum" maxlength="20" value="" required="">
+            <b>Registration Number :</b> <input type="text" name="regNum" id="regNum" maxlength="20" value=""
+                required="">
             <br>
             <br>
-            <i>You should be Enter your D.O.B in DD/MM/YYYY format</i>             
-        </form>
-        <br>
-        <br>
-        <a href="https://harikaran99.github.io/College_Results/questionpaper.html">
+            <b>Date Of Birth :</b> <input type="text" name="dob" id="dob" maxlength="20" value="" required="">
+            <br>
+            <br>
+            <i>You should enter your D.O.B in DD-MM-YYYY format</i>
+            <br>
+            <br>
             <input type="submit" name="submit" value="Submit">
-        </a>
-       </div>
+        </form>
+    </div>
+
     <br>
     <br>
     <br>
     <hr>
     <center>
-    <iframe width="892" height="502" src="https://www.youtube.com/embed/Ik-P1Y2x6jg" title="The Hills x The Color Violet x Creepin (TikTok Remix) by darkvidez" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen align="center"></iframe>
-     </center>
-     <br>
-     <center><b>The Guide to login sample</b></center>
-     <br>
-     <br>
-     <hr>
-    <center>    
-    <div><h3>Arignar Anna Goverment Arts & Science College</h3></div>
-    <div><h5>Affiliated to</h5></div>
-    </body>
-    <div><h3>Thiruvalluvar University Vellore</h3></div>   
-</center>
-    <div style="text-align:center;padding:10px;margin-top:300px;"><h5>copyright tvu.edu.in</h5></div>
-    
-    
-    
-    </body></html>
-    
+        <iframe width="892" height="502"
+            src="https://www.youtube.com/embed/jAM7e8o3OrY"
+            title="Thiruvalluvar University Admission2023-24 (Tamil Version)" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </center>
+    <br>
+    <center><b>The Guide to login sample</b></center>
+    <br>
+    <hr>
+    <center>
+        <div>
+            <h3>Arignar Anna Government Arts & Science College</h3>
+            <h5>Affiliated to</h5>
+            <h3>Thiruvalluvar University Vellore</h3>
+        </div>
+    </center>
+    <div style="text-align:center;padding:10px;margin-top:100px;">
+        <h5>Copyright tvu.edu.in</h5>
+    </div>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            // In a real scenario, you would send a request to the server for authentication.
+            // For simplicity, we'll use hardcoded values here.
+            const validCredentials = [
+                { regNum: "20120U18030", dob: "15-11-2003" },
+                { regNum: "20120U18044", dob: "13-04-2003" },
+                // Add more valid credentials as needed
+            ];
+
+            const regNumInput = document.getElementById("regNum").value;
+            const dobInput = document.getElementById("dob").value;
+
+            const isValid = validCredentials.some(cred => cred.regNum === regNumInput && cred.dob === dobInput);
+
+            if (isValid) {
+                alert("Login successful! Displaying exam results..."); // Replace with your logic to display results.
+                window.location.href = `students_result.html?regNum=${encodeURIComponent(regNumInput)}&dob=${encodeURIComponent(dobInput)}`;
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</body>
+
+</html>

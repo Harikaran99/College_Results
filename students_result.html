@@ -1,0 +1,284 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"></head>
+    <body style="font-family:Verdana;color:#141414; background-color:#f0f0f0; margin: auto auto auto auto; width: 80%;">
+        <script>
+            // Retrieve data from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const regNum = urlParams.get('regNum');
+            let dob = urlParams.get('dob');
+            let userName = ""
+            let marks = "" 
+            if (regNum === "20120U18030"){
+                userName = "HARIHARAN S"
+                marks = {
+                    row1 : {
+                        im : 24,
+                        tm : 57,
+                        fm : 81 
+                    },
+                    row2 : {
+                        im : 22,
+                        tm : 37,
+                        fm : 59 
+                    },
+                    row3 : {
+                        im : 21,
+                        tm : 42,
+                        fm : 63 
+                    },
+                    row4 : {
+                        im : 24,
+                        tm : 32,
+                        fm : 56 
+                    },
+                    row5 : {
+                        im : 22,
+                        tm : 38,
+                        fm : 60 
+                    },
+                    row6 : {
+                        im : 23,
+                        tm : 35,
+                        fm : 58 
+                    },
+                    row7 : {
+                        im : 25,
+                        tm : 36,
+                        fm : 61 
+                    },
+                    row8 : {
+                        im : 23,
+                        tm : 32,
+                        fm : 55 
+                    }
+                }
+            } else if( regNum === "20120U18044"){
+                userName = "MOHAN V"
+                 
+            }
+            // Use the data as needed
+            console.log('Registration Number:', regNum);
+            console.log('Date of Birth:', dob);
+        </script>
+    <div style="padding:15px;text-align:center;" align="center">
+    
+        <img src="questionpaper_files/logo.png"> 
+    
+        <h3 id="me">UG/PG - April/May 2023 Examinations </h3>
+
+        <h4>Third Year 6th Semaster Exam Result</h4>
+         
+    </div>
+        
+      <div class="main" style="overflow:auto">
+        
+        <div style="align-items: center; border: 1px solid #f0f0f0; width : 100%; margin: auto auto auto auto; min-heigh: 300px; background-color:#55f5f5; " align="center">
+        <form name="frm" method="POST">
+            <br>
+            <b>Registration Number : </b> <input type="text" name="regNum" id="regNum" maxlength="20" value="20120U18030" required="" readonly> 
+    
+            
+    
+        </form> 
+       </div>
+            <div style="min-height:350px; background-color:#fff;">
+         
+         
+         
+    
+       
+    <br>
+    
+        <table style="width:80%;margin:auto;border: 1px solid #000 !important;" cellspacing="5" cellpadding="4">
+        <tbody>
+            <tr>
+        <td>
+         Student Name : </td><td id="name"> 
+        <script>
+            let we = document.createElement("b")
+            we.textContent = userName;
+            document.getElementById("name").append(we)
+         </script>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+         D.O.B : </td>
+            <td id="wow">
+                <script>
+                    let se = document.createElement("b")
+                    se.textContent = dob;
+                    document.getElementById("wow").append(se)
+                </script>
+            </td>
+    </tr><tr>
+        <td>
+         Degree : </td><td><b> B.SC COMPUTER SCIENCE </b></td>
+    </tr>
+    <tr><td>
+    
+          Institute Name :</td><td> <b>Arignar Anna Government Arts College-201 </b></td> </tr>
+    </tbody></table>
+    
+    <br>
+        <table style="width:80%;margin:auto;border: 1px solid #000 !important;">
+            <tbody><tr style="background-color: #ccc;font-size:14px;font-weight:bold; ">
+                <td> Papercode </td>
+                <td> Exam date </td>
+                <td>Internal Mark</td>
+                <td>Theory</td>
+                <td>Total</td><td>Result</td><td>
+    
+            </td></tr>
+    
+                                                        <tr style="background-color:#e0ded3;font-size:13px;">
+                                                    <td> CCS61 </td>
+                                                    <td>24-05-2023</td>
+                                                    <td id="row1im"><script>
+                                                        document.getElementById("row1im").append(marks.row1.im)
+                                                    </script></td>
+                                                    <td id="row1tm"><script>
+                                                        document.getElementById("row1tm").append(marks.row1.tm)
+                                                    </script></td>
+      
+     <td id="row1fm"><script>
+        document.getElementById("row1fm").append(marks.row1.fm)
+    </script></td>
+      
+     <td>PASS</td>
+                                                </tr> 
+                                                                                        <tr style="background-color:#e0ded3;font-size:13px;">
+                                                    <td> CCS62 </td>
+                                                    <td>25-05-2023 </td>
+                                                    <td id="row2im"><script>
+                                                        document.getElementById("row2im").append(marks.row2.im)
+                                                    </script></td>
+                                                    <td id="row2tm"><script>
+                                                        document.getElementById("row2tm").append(marks.row2.tm)
+                                                    </script></td>
+     
+     <td id="row2fm"><script>
+        document.getElementById("row2fm").append(marks.row2.fm)
+    </script></td>
+      
+     <td>PASS</td>
+    
+                                                </tr> 
+                                                                                        <tr style="background-color:#e0ded3;font-size:13px;">
+                                                    <td> CECS63A </td>
+                                                    <td>26-05-2023 </td>
+                                                    <td id="row3im"><script>
+                                                        document.getElementById("row3im").append(marks.row3.im)
+                                                    </script></td>
+                                                    <td id="row3tm"><script>
+                                                        document.getElementById("row3tm").append(marks.row3.tm)
+                                                    </script></td>
+      
+     <td id="row3fm"><script>
+        document.getElementById("row3fm").append(marks.row3.fm)
+    </script></td>
+      
+     <td>PASS</td>
+    
+                                                </tr> 
+                                                                                        <tr style="background-color:#e0ded3;font-size:13px;">
+                                                    <td> CECS64C </td>
+                                                    <td> 30-05-2023
+      </td>
+                                                    <td id="row4im"><script>
+                                                        document.getElementById("row4im").append(marks.row4.im)
+                                                    </script></td>
+                                                    <td id="row4tm"><script>
+                                                        document.getElementById("row4tm").append(marks.row4.tm)
+                                                    </script></td>
+                                                    <td id="row4fm"><script>
+                                                        document.getElementById("row4fm").append(marks.row4.fm)
+                                                    </script></td>
+                                                    <td>PASS</td>
+      
+     
+    
+                                                </tr> 
+                                                                                        <tr style="background-color:#e0ded3;font-size:13px;">
+                                                    <td> CNTA65 </td>
+                                                    <td> 03-06-2023</td>
+                                                    <td id="row5im"><script>
+                                                        document.getElementById("row5im").append(marks.row5.im)
+                                                    </script></td>
+                                                    <td id="row5tm"><script>
+                                                        document.getElementById("row5tm").append(marks.row5.tm)
+                                                    </script></td>
+                                                    <td id="row5fm"><script>
+                                                        document.getElementById("row5fm").append(marks.row5.fm)
+                                                    </script></td>
+                                                    <td>PASS</td>
+    
+                                                </tr> 
+                                                                                        <tr style="background-color:#e0ded3;font-size:13px;">
+                                                    <td> CSCV69 </td>
+                                                    <td>05-04
+                                                        -2023</td>
+                                                    <td id="row6im"><script>
+                                                        document.getElementById("row6im").append(marks.row6.im)
+                                                    </script></td>
+                                                    <td id="row6tm"><script>
+                                                        document.getElementById("row6tm").append(marks.row6.tm)
+                                                    </script></td>
+                                                    <td id="row6fm"><script>
+                                                        document.getElementById("row6fm").append(marks.row6.fm)
+                                                    </script></td>
+                                                    <td>PASS</td>
+    
+                                                </tr> 
+    
+                                            </tr> 
+                                            <tr style="background-color:#e0ded3;font-size:13px;">
+        <td> CSCA60 </td>
+        <td>18-04-2023</td>
+        <td id="row7im"><script>
+            document.getElementById("row7im").append(marks.row7.im)
+        </script></td>
+        <td id="row7tm"><script>
+            document.getElementById("row7tm").append(marks.row7.tm)
+        </script></td>
+        <td id="row7fm"><script>
+            document.getElementById("row7fm").append(marks.row7.fm)
+        </script></td>
+        <td>PASS</td>
+    
+    </tr> 
+    
+    </tr> 
+    <tr style="background-color:#e0ded3;font-size:13px;">
+    <td> CSCG64 </td>
+    <td>22-04-2023</td>
+    <td id="row8im"><script>
+        document.getElementById("row8im").append(marks.row8.im)
+    </script></td>
+    <td id="row8tm"><script>
+        document.getElementById("row8tm").append(marks.row8.tm)
+    </script></td>
+    <td id="row8fm"><script>
+        document.getElementById("row8fm").append(marks.row8.fm)
+    </script></td>
+    <td>PASS</td>
+    
+    </tr> 
+                                                </tbody></table>
+        
+        
+    
+        
+        </div>
+    </div>
+    
+       
+    
+    
+    <div style="text-align:center;padding:10px;margin-top:7px;"><h5>copyright tvu.edu.in</h5></div>
+    
+    
+    
+    </body></html>
+    
